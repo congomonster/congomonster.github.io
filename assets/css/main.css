@@ -1,5 +1,203 @@
+/* 
+##################### 
+#      Fonts        #
+#####################
+*/
+
+/* titillium-web-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/titillium/titillium-web-v17-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* titillium-web-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/titillium/titillium-web-v17-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* titillium-web-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/titillium/titillium-web-v17-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* 
+##################### 
+#    Everything     #
+#####################
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-position: inside;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+}
+
+a {
+  color: #7dce94;
+}
+
+a:hover {
+  color: #3d3d3f;
+}
+
+.resimg {
+  width: 100%;
+}
+
+/* 
+##################### 
+#       Body        #
+#####################
+*/
+
 body {
-  font-family: sans-serif;
-  color: #ffffff;
-  background-color: #1c1c1c;
+  font-family: "Titillium Web", sans-serif;
+  color: #3d3d3f;
+  background-color: #f6f5f3;
+  line-height: 1.6;
+}
+
+/* 
+##################### 
+# Header & Footer   #
+#####################
+*/
+
+#header-inner,
+#footer-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0px 25px;
+}
+
+#navbar-desktop {
+  width: 100%;
+}
+
+#navbar-desktop ul,
+#navbar-footer-desktop ul {
+  list-style: none;
+  display: block;
+  margin-top: 15px;
+}
+
+#navbar-desktop ul li a,
+#navbar-footer-desktop ul li a {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  color: #3d3d3f;
+  text-decoration: none;
+  padding: 15px 0px;
+}
+
+#navbar-desktop ul li a:hover,
+#navbar-footer-desktop ul li a:hover {
+  color: #7dce94;
+}
+
+#hero-image {
+  width: 80%;
+  border-radius: 60%;
+  margin: auto;
+  display: block;
+}
+
+@media only screen and (min-width: 992px) {
+  #header-inner,
+  #footer-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+  #navbar-desktop {
+    width: auto;
+  }
+  #navbar-desktop ul,
+  #navbar-footer-desktop ul {
+    display: flex;
+    margin-top: 0px;
+  }
+  #navbar-desktop ul li a,
+  #navbar-footer-desktop ul li a {
+    display: inline-block;
+    padding: 15px 25px;
+  }
+  #hero-image {
+    width: 60%;
+  }
+}
+
+/* 
+##################### 
+#       Main        #
+#####################
+*/
+
+main {
+  align-items: center;
+  max-width: 1200px;
+  margin: 75px auto;
+  padding: 0px 25px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  margin: 50px 0px;
+}
+
+section div {
+  padding: 25px 0px;
+}
+
+section .section-img {
+  width: 80%;
+  margin: auto;
+}
+
+#hero-text {
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 992px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 75px 0px;
+  }
+  #hero-text {
+    font-size: 75px;
+  }
+  section .section-img {
+    width: 60%;
+  }
 }
